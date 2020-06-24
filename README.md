@@ -3,6 +3,8 @@
 
 Hosted URL: https://johnk9000.github.io/HW4-Quizzle-JK/
 
+Diophantine Version: https://johnk9000.github.io/Diophantine-Eqn-Quiz/
+
 ## Introduction
 
 The game is simple enough, given an amount of time, can you correctly answer five questions.  If you choose a wrong answer, a minute will be deducted from the clock and a score will be recorded.
@@ -13,6 +15,8 @@ When an answer choice is selected, the timer WILL PAUSE. Unselected answers will
 
 The question and answers are based off of an introduction to biochemistry slide deck and future releases will include the ability to parse a properly formatted deck to generate the questions and answer choices to use to study with.
 
+* Built an alternative version where you can try and solve up to 100 unique iterations of Pell's Equation, which is a Diophantine Equation. 
+
 ## Answer Key
 
 * "Monomers / Polymers"
@@ -20,6 +24,8 @@ The question and answers are based off of an introduction to biochemistry slide 
 * "Lipds"
 * "Proteins"
 * "Neucleotides"
+
+* Solver for the Diophantine Eqn Quiz: https://comnuan.com/cmnn02/cmnn0200c/
 
 ## Coming Features
 
