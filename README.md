@@ -9,6 +9,8 @@ The game is simple enough, given an amount of time, can you correctly answer fiv
 
 If you answer all five questions or the timer runs out, then it will be game over and will desplay your score out of 100 and the time left.
 
+When an answer choice is selected, the timer WILL PAUSE. Unselected answers will be blurred out except for the correct answer. If the selected answer is correct, it will be highlighted in green and remain large with dark lettering. If the answer you select is wrong, it will be highlighted in red with lighter lettering while the correct answer is revealed. This feature was implemented so that the user can record the right/wrong answers and reference that for later use.
+
 The question and answers are based off of an introduction to biochemistry slide deck and future releases will include the ability to parse a properly formatted deck to generate the questions and answer choices to use to study with.
 
 ## Answer Key
