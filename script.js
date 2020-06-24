@@ -1,4 +1,5 @@
-let page, score, answered, secsLeft;
+let page, score, answered, secsLeft, interval, secs;
+var clockRunning = false;
 var heading = document.querySelector(".display");
 var startBtn = document.querySelector("#start-btn");
 var nxtBtn = document.querySelector("#next-btn");
@@ -22,10 +23,13 @@ const questions = ["What is/are a structural basis in which the four main macrom
 "Adenine, cytosine, guanine, thymine, and uracil are examples of what?"];
 
 function startFcn() {
+    minutesDisplay.textContent = 4;
+    secondsDisplay.textContent = 20;
     console.log("Quiz has begun");
     page = 0;
     score = 0;
     startTimer();
+    clock.classList.remove('hide');
     startBtn.classList.add("hide");
     nxtBtn.classList.remove('hide');
     intro.classList.add("hide");
@@ -49,9 +53,7 @@ function nxtQuest() {
 function nxtPage() {
     page++;
     if(page > questions.length - 1){
-        nxtBtn.classList.add("game-over");
-        nxtBtn.textContent = "Restart"
-        secsLeft = secs;
+        gameOver();
     }
 }
 
@@ -155,10 +157,7 @@ function selectAns(choice) {
     
 }
 
-// Timer Function
-var clockRunning = false;
-let interval, secs;
-
+// Timer Function from previous exercise
 function startTimer() {
     if(clockRunning){
       return;
@@ -196,11 +195,16 @@ function gameOver() {
         secs = 0;
         results.lastElementChild.innerHTML = "with " + secs + " seconds left";
     }
+    var secsLeft = secs;
     results.firstElementChild.innerHTML = "You scored " + 100 * score / answers.length + "%";
-    results.lastElementChild.innerHTML = "with " + secs + " seconds left";
+    results.lastElementChild.innerHTML = "with " + secsLeft + " seconds left";
     results.classList.remove('hide');
     questContEl.classList.add('hide');
     clock.classList.add('hide');
+    nxtBtn.classList.add('hide');
+    startBtn.classList.remove("hide");
+    startBtn.textContent = "Restart";
+        
 }
 // Randomizes index of any array
 function randomIndex(vect) {
