@@ -1,6 +1,8 @@
 # HW4-Quizzle-JK
  Quiz Game Exercise for Homework Assignment
 
+Hosted URL: https://johnk9000.github.io/HW4-Quizzle-JK/
+
 ## Introduction
 
 The game is simple enough, given an amount of time, can you correctly answer five questions.  If you choose a wrong answer, a minute will be deducted from the clock and a score will be recorded.
